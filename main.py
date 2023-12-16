@@ -1,12 +1,16 @@
+from finance_complaint.configs.training_pipeline_config import FinanceConfig
 from finance_complaint.exception import FinanceException
 from finance_complaint.logger import logger
-from finance_complaint.pipeline.training_pipeline import TraningPipeline
-import sys,argparse
+from finance_complaint.pipeline.training_pipeline import TrainingPipeline
+import sys,argparse, os
+
+
 
 def start_training(start=False):
     try:
         if start:
-            TraningPipeline().start()
+            print("Training Running")
+            TrainingPipeline(FinanceConfig()).start()
     except Exception as e:
         raise FinanceException(e, sys)
 

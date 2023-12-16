@@ -64,7 +64,7 @@ class FinanceConfig:
             from_date = metadata_info.to_date
 
         feature_store_dir=os.path.join(data_ingestion_master_dir, DATA_INGESTION_FEATURE_STORE_DIR)
-        failed_dir=os.path.join(data_ingestion_dir, DATA_INGESTION_FAILED_DIR),
+        failed_dir=os.path.join(data_ingestion_dir, DATA_INGESTION_FAILED_DIR)
 
         data_ingestion_config = DataIngestionConfig(
             from_date=from_date,
